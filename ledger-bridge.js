@@ -24,7 +24,7 @@ export default class LedgerBridge {
                         this.getAddress(replyAction, params.accountIdx)
                     break
                     case 'ledger-sign-transaction':
-                        this.signTransaction(replyAction, params.hdPath, params.tx, params.to)
+                        this.signTransaction(replyAction, params.accountIdx, params.tx, params.networkId)
                     break
                 }
             }
