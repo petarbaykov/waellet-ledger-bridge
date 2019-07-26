@@ -11,13 +11,11 @@ import Ae from '@aeternity/ledger-app-api';
 export default class LedgerBridge {
 
     constructor() {
-        console.log("here")
         this.addEventListeners()
     }
 
     addEventListeners() {
         window.addEventListener('message', async e => {
-            console.log(e)
             if(e && e.data && e.data.target === 'LEDGER-IFRAME') {
                 const { action, params } = e.data
                 const replyAction = `${action}-reply`
