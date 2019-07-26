@@ -11,6 +11,7 @@ import Ae from '@aeternity/ledger-app-api';
 export default class LedgerBridge {
 
     constructor() {
+        console.log("here")
         this.addEventListeners()
     }
 
