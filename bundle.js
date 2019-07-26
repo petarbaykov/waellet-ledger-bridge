@@ -118,7 +118,6 @@ var _ledgerBridge2 = _interopRequireDefault(_ledgerBridge);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 console.log("here 1")(async function () {
-    console.log("here2");
     var bridge = new _ledgerBridge2.default();
 })();
 
