@@ -27,6 +27,7 @@ var LedgerBridge = function () {
     function LedgerBridge() {
         _classCallCheck(this, LedgerBridge);
 
+        console.log("here");
         this.addEventListeners();
     }
 
@@ -36,7 +37,8 @@ var LedgerBridge = function () {
             var _this = this;
 
             window.addEventListener('message', async function (e) {
-                if (e && e.data && e.data.target === 'LDEGER-IFRAME') {
+                console.log(e);
+                if (e && e.data && e.data.target === 'LEDGER-IFRAME') {
                     var _e$data = e.data,
                         action = _e$data.action,
                         params = _e$data.params;
@@ -115,7 +117,8 @@ var _ledgerBridge2 = _interopRequireDefault(_ledgerBridge);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(async function () {
+console.log("here 1")(async function () {
+    console.log("here2");
     var bridge = new _ledgerBridge2.default();
 })();
 
